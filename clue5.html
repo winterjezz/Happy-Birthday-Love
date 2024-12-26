@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clue 5</title>
+    <link rel="stylesheet" href="clue.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Clue 5: Yang Ini Gampang!  </h1>
+        <p>Dari berjuta-juta manusia di bumi ini. You have the most dearest and special one 🤭. Who is it?😝</p>
+
+        <div class="prompt">
+        <strong>  She is your Lovely one, dearest one, your world belong to her</strong> 😉</div>
+          <p>write by her full name (lowercase)</p>
+        <input type="text" id="answer" placeholder="Kalo salah ini PARAH sih..">
+        <button onclick="checkAnswer()">Submit</button>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function checkAnswer() {
+            const answer = document.getElementById("answer").value.toLowerCase();
+            if (answer === "anggun dwikasih mahrani harahap") { // Your dream house name
+                window.location.href = "clue6.html";
+                alert("I always know that I am Your love 😝😜🤟. Thank You for the confessed, Bae. 😎")
+            } else {
+                document.getElementById("message").textContent = "Paraah! 🤬 Ayo cobaa yangg benerr..";
+            }
+        }
+    </script>
+</body>
+</html>

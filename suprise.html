@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Iel</title>
+    <link rel="stylesheet" href="clue.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Birtday, Iel! 💗</h1>
+        <p>Selamat bertambah umur kepada insan kesayanganku ♡. Di usia iel yang ke-20 ini, Amu sudah siapin sesuatu buat Iel. Semoga Iel suka ya, Sayang!</p>
+        <p>Are you ready for a little adventure that shows just how much you mean to me? 😄</p>
+        
+        <input type="text" id="fullName" placeholder="Nama Kamu (lowercase)">
+        <button onclick="startHunt()">Start the Hunt</button>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function startHunt() {
+            const fullName = document.getElementById("fullName").value.trim();
+            
+            if (fullName === "rindu sefiarla") {
+                window.location.href = "clue1.html";
+            } else {
+                document.getElementById("message").textContent = "Hmm, Kayanya salah deh.. Coba lagi dong!";
+            }
+        }
+    </script>
+</body>
+</html>

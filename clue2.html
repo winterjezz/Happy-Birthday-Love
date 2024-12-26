@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clue 2</title>
+    <link rel="stylesheet" href="clue.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Clue 2: Our good memory 🎮</h1>
+        <p>Sayang inget gak? Kita pernah main satu game yang berkesan banget buat kita sampe sekarang. We had so much fun when we play that game! Apa nama game nya, Cantik?</p>
+        <input type="text" id="answer" placeholder="Ingeet dongg masa engga..">
+        <button onclick="checkAnswer()">Submit</button>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function checkAnswer() {
+            const answer = document.getElementById("answer").value.toLowerCase();
+            if (answer === "unsolved case") { // Your dream house name
+                window.location.href = "clue3.html";
+                alert("HAHA! Sayang inget gak waktu kita main game itu? We had so much fun together 😆💗. Should we do it again? :)");
+            } else {
+                document.getElementById("message").textContent = "Tetot 🙅🏻‍♀️! Salah. Coba lagi yaa..";
+            }
+        }
+    </script>
+</body>
+</html>

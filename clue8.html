@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clue 8</title>
+    <link rel="stylesheet" href="clue.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Clue 8: My fav Colors!  </h1>
+        <p>Ada dua warna yang bikin aku gak bisa berhenti ngeliatin kamu,
+          Yang satu bikin kamu kelihatan misterius, yang satu bikin kamu kelihatan... <strong>seksi banget</strong> .
+          Apa warna yang aku maksud?</p>
+
+          <p>Hint: dua kata, example (krem dan ungu)</p>
+
+        <input type="text" id="answer" placeholder="C'mon.. you got this, hun">
+        <button onclick="checkAnswer()">Submit</button>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function checkAnswer() {
+            const answer = document.getElementById("answer").value.toLowerCase();
+            if (answer === "hitam dan merah") { // Your dream house name
+                window.location.href = "clue9.html";
+                alert("Ya ampun, kamu tuh ya... bikin warna hitam jadi elegan, dan warna merah jadi... gak tahan liatnya.. too prety and hot.. aku jadi meleleh 🫠❤️");
+            } else {
+                document.getElementById("message").textContent = "Coba warna lainn, sayaangg.. masa gak tauu siii 🤭";
+            }
+        
+        }
+    </script>
+</body>
+</html>

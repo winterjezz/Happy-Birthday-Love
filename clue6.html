@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clue 6</title>
+    <link rel="stylesheet" href="clue.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Clue 6: The Magic Words!  </h1>
+        <p>Kita punya satu kalimat magic yang merupakan kalimat favorit kita bedua. All our feelings are summed up in this one sentence.. What is it? 🤓</p>
+        <div class="prompt">
+            <strong>You know this very well.. we say it everyday..</strong></div>  <br>
+
+        <input type="text" id="answer" placeholder="(lowercase)">
+        <button onclick="checkAnswer()">Submit</button>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function checkAnswer() {
+            const answer = document.getElementById("answer").value.toLowerCase();
+            if (answer === "i love you") { // Your dream house name
+                window.location.href = "clue7.html";
+                alert("Thats right, Sayangg! You did great so far. I love you too, Sayang cantiikkk.. soo much 💗. Shall we move to next page, Pretty?");
+            } else {
+                document.getElementById("message").textContent = "Ayoo sayaangg coba lagiii..😶‍🌫️";
+            }
+        }
+    </script>
+</body>
+</html>
+
+</body>
+</html>

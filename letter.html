@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Hapy Birthday, Love.</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital.ttf') format("truetype");
+		}
+	</style>
+	<link href="letter.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="garden.js"></script>
+	<script type="text/javascript" src="functions.js"></script>
+</head>
+
+<body>
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">Halo, Wanita Manis.</span><br/>
+			<span class="comments">Selamat datang di usia yang ke-20, <br> usia di mana cahaya dirimu semakin bersinar terang.</span><br/>
+			<span class="comments">Hari ini adalah milikmu, <br> hari di mana dunia merayakan kehadiranmu yang begitu indah.</span><br/>
+			<span class="comments">Bagiku, setiap detik bersamamu adalah anugerah, <br> setiap senyummu adalah keajaiban yang tak terlukiskan.</span><br/>
+			<span class="comments"></span><br/>
+			<span class="comments">Usia 20 adalah gerbang menuju mimpi-mimpi besar, <br> tempat di mana harapan dan perjalanan baru dimulai.<br/>
+			<span class="comments">Aku ingin menjadi saksi dari semua langkah yang akan kamu ambil,<br/>
+			<span class="comments">menjadi sandaran di kala kamu lelah, <br> dan menjadi tempatmu pulang, selalu.</span><br/>
+			<span class="comments">Dalam perjalanan Kita selama ini, <br> aku tahu aku bukanlah yang sempurna.</span><br/>
+			<span class="comments">Ada kata yang tak terucap, ada janji yang belum terpenuhi.</span><br/>
+			<span class="comments">Untuk itu, aku memohon maaf dengan sepenuh hati.</span><br/>
+			<span class="comments">Namun percayalah, aku selalu berusaha, <br> dan akan terus berusaha, menjadi seseorang yang layak berdiri di sisimu.</span><br/>			
+			<span class="comments">Ingatlah, di setiap detik perjuanganmu ada hadirku bersamamu.</span><br/>
+			<span class="comments"></span><br/>
+			<span class="comments">Di ulang tahunmu yang ke-20 ini, aku berdoa, <br> semoga kebahagiaan selalu menyertaimu,</span><br/>semoga setiap mimpimu dapat kau raih, <br> dan semoga cinta kita terus tumbuh <br> seperti bunga yang mekar indah setiap musimnya. <br>
+			<span class="comments"></span><br/>
+			<span class="comments">Aku mencintaimu, lebih dari kata-kata yang bisa diucap.</span><br/>
+			<span class="comments">Selamat ulang tahun, cintaku. <br> Selamat menapaki usia yang penuh keajaiban.</span><br/>
+
+			<span class="comments"> I love you forever. </span><br/>
+			<span class="comments"></span><br/>
+			<span class="comments">- Your Love, Anggun Dwikasih aka Amu.</span><br/>
+			
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					Rindu Sefiarla, <br> I have fallen in love with you for
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					  I Love you forever <br> and ever.<br/>
+					<div class="signature"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<a href="index.html">
+  <button class="learn-more" id="letter-link">Home ♡</button>
+</a>
+<script type="text/javascript">
+	// Koordinat awal
+	var offsetX = $("#loveHeart").width() / 2;
+	var offsetY = $("#loveHeart").height() / 2 - 55;
+
+	// Tanggal 
+	var together = new Date();
+	together.setFullYear(2022, 1, 3); // 3 Maret 2022
+	together.setHours(9);
+	together.setMinutes(6);
+	together.setSeconds(0);
+	together.setMilliseconds(0);
+
+	// Cek dukungan HTML5 canvas
+	if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+			document.body.appendChild(msg);
+			$("#code").css("display", "none");
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+			document.execCommand("stop");
+	} else {
+			setTimeout(function () {
+					startHeartAnimation();
+			}, 5000);
+
+			// Fungsi menghitung waktu yang telah berlalu
+			function timeElapse(date) {
+					var now = new Date(); // Waktu sekarang
+					var seconds = Math.floor((now - date) / 1000); // Total detik
+					var days = Math.floor(seconds / (3600 * 24)); // Konversi ke hari
+					seconds %= (3600 * 24);
+					var hours = Math.floor(seconds / 3600); // Sisa jam
+					seconds %= 3600;
+					var minutes = Math.floor(seconds / 60); // Sisa menit
+					seconds %= 60; // Sisa detik
+
+					var result = `<span class="digit">${days}</span> days 
+												<span class="digit">${hours}</span> hours 
+												<span class="digit">${minutes}</span> minutes 
+												<span class="digit">${seconds}</span> seconds`;
+
+					$("#elapseClock").html(result);
+			}
+
+			// Jalankan hitungan pertama kali
+			timeElapse(together);
+
+			// Perbarui hitungan setiap 500 ms
+			setInterval(function () {
+					timeElapse(together);
+			}, 500);
+
+			// Penyesuaian elemen halaman
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+			document.getElementById("letter-link").addEventListener("click", function(event) {
+      event.preventDefault(); // Mencegah pengalihan langsung
+      alert("Sudah dibaca suratnya, Sayang? Do you like it? I hope so :) Once again, Happy Birthday to my special one, Rindu Sefiarla 💗");
+      window.location.href = "index.html"; // Setelah alert, mengarahkan ke halaman letter.html
+  });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clue 7</title>
+    <link rel="stylesheet" href="clue.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Clue 7: This One is Pretty Hard!  </h1>
+        <p>You know I love you very much from head to toe, but what part of your body that I love the most?</p>
+
+        <div class="prompt">
+          <strong>You know this very well..</strong> 😳
+            <p>example:  (my hand)</p>
+
+        <input type="text" id="answer" placeholder="What is it? ">
+        <button onclick="checkAnswer()">Submit</button>
+        <p id="message"></p>
+    </div>
+
+    <script>
+      let hasAnsweredTwin = false; // Flag untuk cek apakah user pernah jawab dari twinAnswers
+  
+      function checkAnswer() {
+          const answer = document.getElementById("answer").value.toLowerCase();
+          const twinAnswers = ["my twins", "my twinnie", "my nenen", "nenenku", "my kembal", "kembalku"]; // Daftar jawaban spesifik
+  
+          if (twinAnswers.includes(answer)) { 
+              // Kalau jawabannya ada di twinAnswers
+              hasAnsweredTwin = true; // Tandai bahwa user sudah pernah jawab twinAnswers
+              document.getElementById("message").textContent = "Hei.. did you just answer that? 😳.. No! Try again.. 😝";
+          } else if (answer === "my face" || answer === "your voice") { 
+              // Jawaban benar
+              document.getElementById("message").textContent = "You got it right! Moving to the final page..";
+              if (hasAnsweredTwin) { 
+                  // Kalau sudah pernah jawab twinAnswers, tampilkan alert twin
+                  alert("Haha, yes, Sayaanggg! You know me so well ❤️. But joke aside, you know I love twins very much, right? They are my favourite too 😉");
+              } else {
+                  // Kalau belum pernah jawab yang ada di twinAnswers
+                  alert("Good girl! You got it right, Sayanggg.. I am so proud of you! 🥳💗 Your face, Your voice is absoutely my Fav thing in this world, Baby.. How can you have that pretty face with an angelic voice, Huh? 🥺 I really really in love with You, Iel..");
+              }
+              window.location.href = "clue8.html"; // Pindah halaman setelah alert
+          } else {
+              // Jawaban salah lainnya
+              document.getElementById("message").textContent = "Nopeee, coba yang lain deh, Sayaanggg..";
+          }
+      }
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clue 9</title>
+    <link rel="stylesheet" href="clue.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Clue 9: Your favourite!  </h1>
+        <p>Now is my turn! Iel yang paling tau ini.. Apa bagian tubuh Amu yang paling Iel suka? </p>
+        <p class="light-text">example: (your hand)</p>
+
+
+        <input type="text" id="answer" placeholder="What is it?... 😋">
+        <button onclick="checkAnswer()">Submit</button>
+        <p id="message"></p>
+    </div>
+
+    <script>
+      let hasAnsweredTwin = false; // Flag untuk cek apakah user pernah jawab dari twinAnswers
+  
+      function checkAnswer() {
+          const answer = document.getElementById("answer").value.toLowerCase();
+          const twinAnswers = ["your twins", "your twinnie", "your nenen", "nenenmu", "your kembal", "kembalmu"]; // Daftar jawaban spesifik
+  
+          if (twinAnswers.includes(answer)) { 
+              // Kalau jawabannya ada di twinAnswers
+              hasAnsweredTwin = true; // Tandai bahwa user sudah pernah jawab twinAnswers
+              document.getElementById("message").textContent = "Hei.. did you just answer that? 😳.. No! Try again.. 😝";
+          } else if (answer === "your eyes" || answer === "your voice") { 
+              // Jawaban benar
+              document.getElementById("message").textContent = "Pinter, Sayang! Kita lanjut ya ke next page..";
+              if (hasAnsweredTwin) { 
+                  // Kalau sudah pernah jawab twinAnswers, tampilkan alert twin
+                  alert("HAHA! I know you love my eyes and voice so much... But why do you answer with kembal 😳🫣. Do You like them that much, Honey? Wants to see them again? 😉");
+              } else {
+                  // Kalau belum pernah jawab yang ada di twinAnswers
+                  alert("Good girl! I know you love me so much 🤭😝. And I love you too! 💗");
+              }
+              window.location.href = "clue10.html"; // Pindah halaman setelah alert
+          } else {
+              // Jawaban salah lainnya
+              document.getElementById("message").textContent = "Tidaaaakkk.. coba input jawaban lainn, Sayangg cantiikk.. masa salah sih, hum? 🧐";
+          }
+      }
+  </script>
+</body>
+</html>

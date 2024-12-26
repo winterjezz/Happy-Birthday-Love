@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Link untuk Treasure Hunt -->
+  <a href="suprise.html" id="treasure-link">
+    <button class="learn-more">Click Me!</button>
+  </a>
+
+  <div class="container">
+    <div class="valentines">
+      <div class="envelope">
+        <div class="card">
+          <div class="text">
+            Happy <br> Birthday, <br> Iel
+          </div>
+          <div class="heart"></div>
+        </div>
+        <div class="front"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Menangani event klik pada tombol
+    document.getElementById("treasure-link").addEventListener("click", function(event) {
+        event.preventDefault(); // Mencegah pengalihan langsung ke suprise.html
+        alert("Are you ready for a litte adventure, baby? i work hard for this, and I hope you enjoy and feel happy. :)");
+        window.location.href = "suprise.html"; // Setelah alert, mengarahkan ke halaman suprise.html
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clue 10</title>
+    <link rel="stylesheet" href="clue.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Clue 10: Last question!  </h1>
+        <p>Kita punya sebutan khusus buat satu sama lain yang udah kebayang banget di masa depan, ya kalau kita udah nikah dan punya anak. Apa kira-kira itu? Cuma kita berdua yang tahu, loh.. 😋</p>
+        
+
+        <input type="text" id="answer" placeholder="Our lovely fture petname 🥰">
+        <button onclick="checkAnswer()">Submit</button>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function checkAnswer() {
+            const answer = document.getElementById("answer").value.toLowerCase();
+            if (answer === "mama mami") { // Your dream house name
+                window.location.href = "final.html";
+                alert("I always dream we become together in one roof, share the same bed same blanket, have cuddle all day.. isn't wonderful, Babe? 🥺. You have answer all the questions right, I am so proud of You, My Love.. 🥰💗");
+            } else {
+                document.getElementById("message").textContent = "Masaa tidak tauuu siiihh, bubbieee..";
+            }
+        }
+    </script>
+</body>
+</html>
+
+</body>
+</html>

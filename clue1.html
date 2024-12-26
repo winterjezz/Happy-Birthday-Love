@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clue 1</title>
+    <link rel="stylesheet" href="clue.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Clue 1: Our Romantic Date 💖</h1>
+        <p>Close your eyes and think back to the day everything began. The moment we officially became 'us.' What was the date of that unforgettable milestone? Please enter it. <br><strong>DD/MM/YYYY</strong>.</p>
+        <input type="text" id="answer" placeholder="Ini kalo salah Parah ya..">
+        <button onclick="checkAnswer()">Submit</button>
+        <p id="message"></p>
+    </div>
+    <script>
+        function checkAnswer() {
+            const answer = document.getElementById("answer").value;
+            const correctAnswer = "03/02/2022"; // Your first romantic date
+
+            if (answer === correctAnswer) {
+                window.location.href = "clue2.html";
+                alert("Yes, Baby. Di tanggal itu semuanya berawal.. terima kasih atas segalanya. Aku cinta kamu 💗. I hope we always cherished our special date forever.");
+            } else {
+                document.getElementById("message").textContent = "JIR bisa bisanya kamu salah.. apah ngambek aja ya aku...";
+            }
+        }
+    </script>
+</body>
+</html>

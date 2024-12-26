@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clue 4</title>
+    <link rel="stylesheet" href="clue.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Clue 4: Our Song! 🎶 </h1>
+        <p>Dari berjuta-juta lagu di bumi ini, we have the special one. what is it, Baby? <br> song-artist</p>
+        <input type="text" id="answer" placeholder="(kalo gak tau ini Parah sih)">
+        <button onclick="checkAnswer()">Submit</button>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function checkAnswer() {
+            const answer = document.getElementById("answer").value.toLowerCase();
+            if (answer === "honey-kehlani") { // Your dream house name
+                window.location.href = "clue5.html";
+                alert("All the pretty girls in the world, but I'm in this space with You.. fate chose us to be together, thats why they put us in the same space. ♡")
+            } else {
+                document.getElementById("message").textContent = "Hmmzz.. Coba lagi dongg maniss.";
+            }
+        }
+    </script>
+</body>
+</html>

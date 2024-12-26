@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Surprise</title>
+    <link rel="stylesheet" href="clue.css">
+    <style>
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .prompt {
+            margin: 20px 0;
+            font-size: 1.2em;
+            color: #ff66b2;
+        }
+        .prompt-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .prompt-button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #ff66b2;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .prompt-button:hover {
+            background-color: #ff3385;
+        }
+        video {
+            display: none;
+            width: 100%;
+            max-width: 600px;
+            height: 900px;
+            object-fit: cover;
+            margin: 20px auto;
+        }
+        #giftImageContainer {
+            display: none;
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+        #giftImage {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 102, 178, 0.8);
+            padding: 10px 20px;
+            font-size: 1.5em;
+            color: #fff;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+        }
+        .play-button:hover {
+            background-color: rgba(255, 51, 133, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Surprise! 🎉</h1>
+        <p>Selamat, Sayangg! You've completed the treasure hunt!</p>
+        <p>As I reflect on these amazing time with you, I want to express my heartfelt gratitude for every moment we've shared. You are truly a gift in my life, and I cherish every memory we create together.</p>
+        
+        <div class="prompt">
+            Here are your <strong>gift</strong>, I really hope you like it, My Love. 
+        </div>
+            <a href="iloveyou.html">
+            <button class="prompt-button" onclick="requestGift()">Surprise Gift</button>
+            </a>
+        <p style="margin-top: 20px;">I can't wait for us to celebrate together! 💗</p>
+    </div>
+
+    <script>
+        function requestGift() {
+            alert("Congrats, Sayang 🥳! you finished Treasure Hunt! did you enjoy it or is it getting frustrating? 😝 I have one more thing for you, My Love.🥰 Hope you enjoy it. And once again, Happy Birthday.💗");
+            
+        }
+        
+    </script>
+</body>
+</html>

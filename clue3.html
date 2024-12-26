@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clue 3</title>
+    <link rel="stylesheet" href="clue.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Clue 3: Warna Kita! </h1>
+        <p>Ada dua warna yang selalu jadi simbol kita. Warna apa itu, Sayangg?</p>
+        <input type="text" id="answer" placeholder="apa cobaa.. hayoo..">
+        <button onclick="checkAnswer()">Submit</button>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function checkAnswer() {
+            const answer = document.getElementById("answer").value.toLowerCase();
+            if (answer === "blue pink") { // Your dream house name
+                window.location.href = "clue4.html";
+                alert("Keren, Sayangg you got it right! Blue and pink will always be the colors that represent us.💗💙")
+            } else {
+                document.getElementById("message").textContent = "Eh masih salah nih, Sayangg... Coba lagi yaa sayang maniiss..";
+            }
+        }
+    </script>
+</body>
+</html>
